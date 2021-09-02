@@ -425,6 +425,21 @@ form div:last-child {
 
 /* feature section start */
 
+.feature-section { background-color: #1E202B; }
+
+.feature-section .wrapper {
+  padding: 75px 0 85px;
+  display: flex;
+}
+
+.section-header {
+  margin-bottom: 24px;
+  color: #FFFFFF;
+  font-size: 35px;
+}
+
+.section-header::first-letter,
+.awesome-photo .section-header { text-transform: capitalize; }
 
 
 

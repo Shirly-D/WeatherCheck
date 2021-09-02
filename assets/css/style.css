@@ -324,7 +324,7 @@ form div:last-child {
   background-color: #1E202B;
 }
 
-.live-camera .wrapper { padding: 275px 0 110px; }
+.live-camera .wrapper { padding: 270px 0 110px; }
 
 .live-camera h3 {
   margin-bottom: 26px;
@@ -355,6 +355,8 @@ form div:last-child {
   transform: translate(-50%, -50%);
 }
 
+.live-camera li figure:nth-child(2) a { cursor: pointer; }
+
 .live-camera li h4 {
   margin-bottom: 8px;
   color: #F3F3F3;
@@ -368,6 +370,56 @@ form div:last-child {
 }
 
 /* live camera section end */
+
+/* dolorem section start */
+
+.dolorem-section { background-color: #262936; }
+.dolorem-section .wrapper { padding: 74px 0; }
+.dolorem-section ul { display: flex; }
+
+.dolorem-section  li div:first-child {
+  margin-top: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dolorem-section li div:first-child span {
+  color: #048DC5;
+  font-size: 25px;
+}
+
+.dolorem-section li div:last-child {
+  width: 68%;
+  margin-left: 9%;
+  display: inline-block;
+}
+
+.dolorem-section li:nth-child(2) div:last-child { width: 70%; }
+.dolorem-section li:nth-child(3) div:last-child { width: 72%; }
+
+.dolorem-section li div:last-child h4 {
+  margin-bottom: 22px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dolorem-section li div:last-child h4::first-letter,
+.dolorem-section li div:last-child p::first-letter { text-transform: capitalize; }
+
+.dolorem-section li div:last-child p {
+  margin-bottom: 15px;
+  color: #A6A8B1;
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.dolorem-section li div:last-child figure {
+  width: 5%;
+  display: inline-block;
+}
+
+/* dolorem section end */
 
 
 

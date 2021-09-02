@@ -118,7 +118,11 @@ header .wrapper {
 }
 
 header h1 { flex-basis: 40%; }
-header h1 a { width: 100%; }
+
+header h1 a { 
+  width: 100%; 
+  cursor: pointer;
+}
 
 header h1 img {
   width: 14%;
@@ -148,7 +152,7 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .menu .bar { text-indent: -9999px; }
 .hamburger { display: none; }
-.menu { flex-basis: 50%; }
+.menu { flex-basis: 49%; }
 
 .menu ul {
   display: flex;
@@ -156,9 +160,22 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 }
 
 .menu ul li { font-size: 15px; }
-.menu ul li a { color: #D3D4D6; }
+
+.menu ul li a { 
+  padding: 5px 27px;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  color: #DADBDD;
+  cursor: pointer;
+  transition: .7s;
+}
+
 .menu ul li a::first-letter { text-transform: capitalize; }
 
+.menu .active-navlist a { 
+  border-color: #009AD8; 
+  color: #009AD8;
+}
 
 /*=================================
   Header styling ends here
@@ -208,6 +225,13 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   /* header start */
 
   header h1 span:hover { color: #0FB2DD; }
+
+  .menu ul li a:hover { 
+    border-color: #009AD8;
+    color: #009AD8;
+  }
+
+  /* header end */
 
 
 }  

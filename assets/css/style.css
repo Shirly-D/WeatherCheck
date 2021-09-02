@@ -434,12 +434,59 @@ form div:last-child {
 
 .section-header {
   margin-bottom: 24px;
+  display: inline-block;
   color: #FFFFFF;
   font-size: 35px;
 }
 
 .section-header::first-letter,
 .awesome-photo .section-header { text-transform: capitalize; }
+
+.app-feature li figure,
+.weather-analyse ul li figure {
+  width: 3%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.app-feature li div {
+  width: 79%;
+  margin-left: 2%;
+  display: inline-block;
+}
+
+.app-feature li div h5 {
+  margin-bottom: 23px;
+  color: #F9F9F9;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.app-feature li div p {
+  margin-bottom: 20px;
+  color: #AEB0B8;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.app-feature li div h5::first-letter,
+.app-feature li div p::first-letter { text-transform: capitalize; }
+.weather-analyse ul li figure { vertical-align: baseline; }
+
+.weather-analyse ul li {
+  width: 70%;
+  border-bottom: 1px solid #33353F;
+}
+
+.weather-analyse ul li p {
+  margin: 13px 0 13px 1%;
+  display: inline-block;
+  color: #E0E0E2;
+}
+
+.weather-analyse ul li p::first-letter { text-transform: capitalize; }
+
+
 
 
 

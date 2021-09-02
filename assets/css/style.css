@@ -108,7 +108,7 @@ li {
 =================================*/
 
 header {
-  padding: 51px 0;
+  padding: 48px 0 55px;
   background-color: #1E202B;
 }
 
@@ -146,9 +146,18 @@ header h1 span > span {
 
 header h1 span > span::first-letter { text-transform: lowercase; }
 
+.menu .bar { text-indent: -9999px; }
+.hamburger { display: none; }
+.menu { flex-basis: 50%; }
 
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+}
 
-
+.menu ul li { font-size: 15px; }
+.menu ul li a { color: #D3D4D6; }
+.menu ul li a::first-letter { text-transform: capitalize; }
 
 
 /*=================================

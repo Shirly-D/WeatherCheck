@@ -374,7 +374,7 @@ form div:last-child {
 /* dolorem section start */
 
 .dolorem-section { background-color: #262936; }
-.dolorem-section .wrapper { padding: 74px 0; }
+.dolorem-section .wrapper { padding: 73px 0 64px; }
 .dolorem-section ul { display: flex; }
 
 .dolorem-section  li div:first-child {
@@ -419,7 +419,16 @@ form div:last-child {
   display: inline-block;
 }
 
+.dolorem-section li div:last-child figure a { cursor: pointer; }
+
 /* dolorem section end */
+
+/* feature section start */
+
+
+
+
+/* feature section end */
 
 
 

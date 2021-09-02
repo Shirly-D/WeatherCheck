@@ -194,6 +194,10 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   width: 100%;
 }
 
+.banner .wrapper figure:first-child,
+.banner .wrapper figure:first-child img { height: 370px; }
+
+
 .banner form {
   width: 79%;
   border-radius: 40px;
@@ -249,7 +253,7 @@ form div:last-child {
   margin: 0 auto;
   position: absolute;
   z-index: 2;
-  top: 375px;
+  top: 356px;
   left: 50%;
   background-color: #323544;
   transform: translate(-50%, -50%);  

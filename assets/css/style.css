@@ -510,7 +510,95 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 /* main section start */
 
+.breadcrumbs,
+.image-list { background-color: #1E202B; }
+.breadcrumbs { padding-bottom: 74px; }
 
+.breadcrumbs ul {
+  height: 26px;
+  padding: 18px 32px;
+  border-radius: 40px;
+  background-color: #262936;    
+}
+
+.breadcrumbs ul li { text-transform: capitalize; }
+
+.breadcrumbs ul li a {
+  color: #B5B7BF;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.breadcrumbs li:nth-child(2) { padding: 0 .5%; }
+.breadcrumbs li:nth-child(3) a { color: #DFDFE1; }
+.image-list { padding-bottom: 75px; }
+
+.image-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-list ul li {
+  border: #262936;
+  margin-bottom: 30px;
+  flex-basis: 49%;
+}
+
+.image-list ul li figure {
+  width: 50%;
+  display: inline-block;
+}
+
+.image-list li figure img { border-radius: 10px 0 0 10px; }
+
+.image-list .text {
+  width: 43%;
+  padding: 18px 3% 17px 3%;
+  border-radius: 0 10px 10px 0;
+  margin-left: -4px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #262936;  
+}
+
+.text h3 {
+  margin-bottom: 10px;
+  color: #D3D4D6;
+  font-size: 17px;
+}
+
+.text p {
+  margin-bottom: 20px;
+  color: #AEB1B8;
+  font-size: 15px;
+  line-height: 22px;    
+}
+
+.text h3::first-letter,
+.text p::first-letter { text-transform: capitalize; }
+
+.image-list .star-list { 
+  margin-left: 2%;
+  display: inline-block;
+}
+
+.image-list .star-list li span { 
+  display: inline-block;
+  text-indent: -9999px; 
+}
+
+.image-list .star-list span:before {
+  content: "\f005";
+  margin-left: -4px;
+  float: left;
+  font-size: 17px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+
+.star-list .filled-star span::before { color: #009AD8; }
+.star-list .hollow-star span::before { color: #1E202B; }
 
 /* main section end */
 
@@ -648,6 +736,11 @@ footer {
 
   .submit:hover,
   .footer-top .subscribe:hover { background-color: #8D8F97; }
+
+  .breadcrumbs ul li:first-child a:hover { 
+    border-bottom: 1px solid #009AD8; 
+    color: #009AD8;
+  }
 
   /* main end */
 

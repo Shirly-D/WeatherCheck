@@ -112,7 +112,7 @@ header {
   background-color: #1E202B;
 }
 
-header .wrapper {
+.header-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,7 +483,7 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .feature-section { background-color: #1E202B; }
 
-.feature-section .wrapper {
+.feature-parent-div {
   padding: 66px 0 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,9 +697,8 @@ footer {
   background-color: #262936; 
 }
 
-.footer-top { margin-bottom: 35px; }
-
-.footer-top .wrapper {
+.footer-top {
+  margin-bottom: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

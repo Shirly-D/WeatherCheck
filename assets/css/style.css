@@ -113,11 +113,18 @@ header {
 }
 
 header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-header h1 { flex-basis: 40%; }
+header h1 { 
+  -ms-flex-preferred-size: 19%; 
+  flex-basis: 19%; 
+}
 
 header h1 a { 
   width: 100%; 
@@ -125,7 +132,7 @@ header h1 a {
 }
 
 header h1 img {
-  width: 14%;
+  width: 30%;
   vertical-align: bottom;
 }
 
@@ -136,6 +143,8 @@ header h1 span {
   font-size: 16px;
   font-family: sans-serif;
   font-weight: bold;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -152,14 +161,25 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .menu .bar { text-indent: -9999px; }
 .hamburger { display: none; }
-.menu { flex-basis: 49%; }
 
-.menu ul {
-  display: flex;
-  justify-content: space-between;
+.menu { 
+  -ms-flex-preferred-size: 49%; 
+  flex-basis: 49%; 
 }
 
-.menu ul li { font-size: 15px; }
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu ul li { 
+  font-size: 15px; 
+  white-space: nowrap;
+}
 
 .menu ul li a { 
   padding: 5px 27px;
@@ -167,6 +187,8 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   border-radius: 40px;
   color: #DADBDD;
   cursor: pointer;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
   transition: .7s;
 }
 
@@ -205,7 +227,9 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   position: absolute;
   top: 100px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .banner form div:first-child {
@@ -225,24 +249,30 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   font-size: 16px;
 }
 
+.location::-webkit-input-placeholder { font-size: 16px; }
+.location::-moz-placeholder { font-size: 16px; }
+.location:-ms-input-placeholder { font-size: 16px; }
+.location::-ms-input-placeholder { font-size: 16px; }
 .location::placeholder { font-size: 16px; }
 
 .banner form div:last-child {
   width: 10%;
   display: inline-block;
   position: absolute;
-  right: 0%;  
+  right: 1%;  
 }
 
 .submit {
   width: 100%;
-  height: 57px;
+  height: 53px;
   border: 4px solid #1E202B;
   border-radius: 40px;
   background-color: #009AD8;
   color: #E7F5FB;
   cursor: pointer;
   font-size: 14px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -256,18 +286,24 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   top: 356px;
   left: 50%;
   background-color: #323544;
-  transform: translate(-50%, -50%);  
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);  
 }
 
 .weather-display .display {
   padding: 12px;
   border-radius: 15px 15px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #2D303D;
   color: #AAACB4;
   font-size: 14px;
   font-weight: bold;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-transform: capitalize;
 }
 
@@ -298,11 +334,21 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 .weather-condition { 
   width: 45%;
   margin-top: 25px; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex;
 }
 
-.weather-condition li { flex-basis: 30%; }
-.weather-condition li:nth-child(2) { flex-basis: 42%; }
+.weather-condition li { 
+  -ms-flex-preferred-size: 30%; 
+  flex-basis: 30%; 
+}
+
+.weather-condition li:nth-child(2) { 
+  -ms-flex-preferred-size: 42%; 
+  flex-basis: 42%; 
+}
+
 .weather-condition li:nth-child(2) figure { width: 21%; }
 
 .weather-condition figure { 
@@ -314,7 +360,6 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   display: inline-block;
   color: #9597A0;
 }
-
 /* section banner end */
 
 /* live camera section start */
@@ -336,8 +381,12 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 .live-camera h3::first-letter { text-transform: capitalize; }
 
 .live-camera ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .live-camera ul li { 
@@ -352,7 +401,9 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   position: absolute;
   top: 94px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .live-camera li figure:nth-child(2) a { cursor: pointer; }
@@ -375,7 +426,12 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .dolorem-section { background-color: #262936; }
 .dolorem-section .wrapper { padding: 73px 0 64px; }
-.dolorem-section ul { display: flex; }
+
+.dolorem-section ul { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex; 
+}
 
 .dolorem-section  li div:first-child {
   margin-top: 5px;
@@ -429,6 +485,8 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .feature-section .wrapper {
   padding: 66px 0 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -439,7 +497,10 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   font-size: 38px;
 }
 
-.app-feature { flex-basis: 35%; }
+.app-feature {
+  -ms-flex-preferred-size: 35%; 
+  flex-basis: 35%; 
+}
 
 .section-header::first-letter,
 .awesome-photo .section-header { text-transform: capitalize; }
@@ -473,7 +534,12 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .app-feature li div h5::first-letter,
 .app-feature li div p::first-letter { text-transform: capitalize; }
-.weather-analyse { flex-basis: 33%; }
+
+.weather-analyse { 
+  -ms-flex-preferred-size: 33%; 
+  flex-basis: 33%; 
+}
+
 .weather-analyse ul li figure { vertical-align: baseline; }
 
 .weather-analyse ul li {
@@ -490,11 +556,18 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 
 .weather-analyse ul li:last-child { border-bottom: none; }
 .weather-analyse ul li p::first-letter { text-transform: capitalize; }
-.awesome-photo { flex-basis: 32%; }
+
+.awesome-photo { 
+  -ms-flex-preferred-size: 32%; 
+  flex-basis: 32%; 
+}
 
 .awesome-photo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .awesome-photo li {
@@ -534,15 +607,21 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 .image-list { padding-bottom: 75px; }
 
 .image-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .image-list ul li {
   border: #262936;
   margin-bottom: 30px;
-  flex-basis: 49%;
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
 }
 
 .image-list ul li figure {
@@ -621,13 +700,18 @@ footer {
 .footer-top { margin-bottom: 35px; }
 
 .footer-top .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer-top form {
   position: relative;
-  flex-basis: 65%;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
 }
 
 .footer-top form div:first-child {
@@ -646,6 +730,10 @@ footer {
   font-size: 16px;
 }
 
+.footer-top .email::-webkit-input-placeholder { font-size: 15px; }
+.footer-top .email::-moz-placeholder { font-size: 15px; }
+.footer-top .email:-ms-input-placeholder { font-size: 15px; }
+.footer-top .email::-ms-input-placeholder { font-size: 15px; }
 .footer-top .email::placeholder { font-size: 15px; }
 
 .footer-top form div:last-child {
@@ -665,10 +753,16 @@ footer {
   color: #E7F5FB;
   cursor: pointer;
   font-size: 14px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
-.footer-top ul { flex-basis: 23%; }
+.footer-top ul { 
+  -ms-flex-preferred-size: 23%; 
+  flex-basis: 23%; 
+}
+
 .footer-top ul li { border-radius: 50%; }
 .footer-top ul li:first-child a { padding: 10px 14px; }
 
@@ -678,6 +772,8 @@ footer {
   background-color: #1E202B;
   cursor: pointer;
   text-indent: -9999px; 
+  -webkit-transition: 1s; 
+  -o-transition: 1s; 
   transition: 1s;
 }
 
@@ -688,6 +784,8 @@ footer {
   font-size: 20px;
   font-family: "FontAwesome";
   text-indent: 0;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -702,8 +800,6 @@ footer {
 }
 
 .footer-bottom p::first-letter { text-transform: capitalize; }
-
-
 
  /*=================================
   footer styling ends here
@@ -749,5 +845,4 @@ footer {
   .footer-top li a:hover { background-color: #048DC5; }
   .footer-top li a:hover::before { color: #FFFFFF; }
   /* footer end */
-
 }  

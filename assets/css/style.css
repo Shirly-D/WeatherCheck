@@ -436,8 +436,10 @@ form div:last-child {
   margin-bottom: 24px;
   display: inline-block;
   color: #FFFFFF;
-  font-size: 35px;
+  font-size: 38px;
 }
+
+.app-feature { flex-basis: 35%; }
 
 .section-header::first-letter,
 .awesome-photo .section-header { text-transform: capitalize; }
@@ -456,14 +458,14 @@ form div:last-child {
 }
 
 .app-feature li div h5 {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   color: #F9F9F9;
   font-size: 14px;
   font-weight: bold;
 }
 
 .app-feature li div p {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #AEB0B8;
   font-size: 14px;
   line-height: 22px;
@@ -471,20 +473,37 @@ form div:last-child {
 
 .app-feature li div h5::first-letter,
 .app-feature li div p::first-letter { text-transform: capitalize; }
+.weather-analyse { flex-basis: 33%; }
 .weather-analyse ul li figure { vertical-align: baseline; }
 
 .weather-analyse ul li {
-  width: 70%;
+  width: 86%;
   border-bottom: 1px solid #33353F;
 }
 
 .weather-analyse ul li p {
-  margin: 13px 0 13px 1%;
+  margin: 14px 0 14px 1%;
   display: inline-block;
   color: #E0E0E2;
+  font-size: 14px;
 }
 
+.weather-analyse ul li:last-child { border-bottom: none; }
 .weather-analyse ul li p::first-letter { text-transform: capitalize; }
+.awesome-photo { flex-basis: 32%; }
+
+.awesome-photo ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.awesome-photo li {
+  width: 31%;
+  margin: 0 0 13px 3%;
+}
+
+.awesome-photo li:nth-child(3n - 2) { margin-left: 0; }
+
 
 
 

@@ -907,9 +907,9 @@ footer {
     width: 100%;
     height: auto;
     border: #262936;
-    border-radius: 15px;
-    background: #46525C;
-    top: 60px;
+    border-radius: 40px;
+    background: #262936;
+    top: 120px;
     left: -100%;
     text-align: center;
     transition: 1s;
@@ -917,6 +917,7 @@ footer {
   }
 
   .menu ul.active { transform: scaleY(1); }
+  .menu ul.active li a { color: #009AD8; }
   .menu { width: 7%; }
   .menu .active-navlist a { color: #009AD8; }
   .menu ul li a { color: #FFFFFF; }
@@ -926,7 +927,7 @@ footer {
     display: block;
     border-bottom: 2px solid #46525C;
     margin: 15px 0;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 30px;
     text-align: center;
   }

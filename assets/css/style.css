@@ -845,6 +845,7 @@ footer {
 
 @media only screen and (max-width: 995px) {
 
+  header { padding: 48px 0 342px; }
   header .wrapper { width: 87%; }
   header h1 { flex-basis: 28%; }
 
@@ -903,7 +904,7 @@ footer {
 
   .menu ul {
     position: absolute;
-    width: 90%;
+    width: 190%;
     height: auto;
     border: #262936;
     border-radius: 15px;
@@ -923,12 +924,14 @@ footer {
 
   .menu ul li {
     display: block;
+    border-bottom: 2px solid #46525C;
     margin: 15px 0;
     font-size: 13px;
     line-height: 30px;
     text-align: center;
   }
 
+  .menu ul li:last-child { border-bottom: none; }
   .banner form div:last-child { width: 15%; }
   .display-city-temp .temperature { font-size: 76px; }
   .display-city-temp figure { width: 20%; }

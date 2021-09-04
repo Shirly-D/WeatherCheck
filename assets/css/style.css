@@ -917,7 +917,7 @@ footer {
   }
 
   .menu ul.active { transform: scaleY(1); }
-  .menu ul.active li a { color: #009AD8; }
+  .menu ul.active li a { border: none; }
   .menu { width: 7%; }
   .menu .active-navlist a { color: #009AD8; }
   .menu ul li a { color: #FFFFFF; }

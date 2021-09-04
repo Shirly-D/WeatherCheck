@@ -44,16 +44,15 @@ button.addEventListener('click', function(e){
 })
 
 function weatherData(w) {
-    day.innerHTML = new Date();
-    console.log(day);
+    day = new Date();
     // date.getDate();
     // date.getMonth()+1;
     // date.innerHTML = new Date().toUTCString();
     var celcius = Math.round(parseFloat(w.main.temp)-273.15);
     var fahrenheit = Math.round(((parseFloat(w.main.temp)-273.15)*1.8)+32);
-    temperature.innerHTML = celcius + '&deg;';
+    temperature.innerHTML = celcius + '&deg;' + "C";
     document.querySelector('.city-name').innerHTML =  w.name;
-    humidity.innerHTML = w.main.humidity;
-    windSpeed.innerHTML = w.wind.speed;
-    compass.innerHTML = w.wind.deg;
+    humidity.innerHTML = w.main.humidity + "%";
+    windSpeed.innerHTML = w.wind.speed + "m/sec";
+    compass.innerHTML = w.wind.deg + "&deg;";
 } 

@@ -904,7 +904,7 @@ footer {
 
   .menu ul {
     position: absolute;
-    width: 190%;
+    width: 100%;
     height: auto;
     border: #262936;
     border-radius: 15px;

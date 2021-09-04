@@ -10,14 +10,7 @@ menu.addEventListener('click', function(e){
 })
 
 // Active nav links
-$(function() {
-    if ((location.pathname.split("/")[1]) !== ""){
-        $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-    }
-    else {
-        $('nav li:nth-child(4) a').addClass('active');
-    }
-});
+
 
 
 // weather check
@@ -31,6 +24,7 @@ var temperature = document.querySelector('.temperature');
 var humidity = document.querySelector('.humidity');
 var windSpeed = document.querySelector('.wind-speed');
 var compass = document.querySelector('.compass');
+var image = document.querySelector('.')
  
 button.addEventListener('click', function(e){
     e.preventDefault();
@@ -42,7 +36,6 @@ button.addEventListener('click', function(e){
     .then(function(data)
     {
         weatherData(data);
-        console.log(data);
     })
 })
 
@@ -61,6 +54,9 @@ function weatherData(w) {
     humidity.innerHTML = w.main.humidity + "%";
     windSpeed.innerHTML = w.wind.speed + "m/sec";
     compass.innerHTML = w.wind.deg + "&deg;";
+
+
+
 } 
 
 window.addEventListener('load', function(e) {

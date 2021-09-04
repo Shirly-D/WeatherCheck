@@ -106,7 +106,6 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
-
 header {
   padding: 48px 0 58px;
   background-color: #1E202B;
@@ -633,7 +632,8 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   width: 100%;
   height: 100%;
   border-radius: 10px 0 0 10px; 
-  object-fit: cover;
+  -o-object-fit: cover; 
+     object-fit: cover;
 }
 
 .image-list .text {
@@ -815,7 +815,8 @@ footer {
 @media only screen and (max-width: 1490px) {
 
   .menu {
-    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
     text-align: end;
   }
 }  
@@ -826,7 +827,11 @@ footer {
 
 @media only screen and (max-width: 1200px) {
 
-  header h1 { flex-basis: 23%; }
+  header h1 { 
+    -ms-flex-preferred-size: 23%; 
+    flex-basis: 23%; 
+  }
+  
   .live-camera li figure:nth-child(2) { top: 78%; }
   
   .dolorem-section .wrapper,
@@ -838,8 +843,12 @@ footer {
   .weather-condition { width: 45%; }
 
   .image-list ul li {
-    flex-basis: 90%;
-    flex-direction: column;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
 
@@ -876,7 +885,11 @@ footer {
 
   header { padding: 48px 0 342px; }
   header .wrapper { width: 87%; }
-  header h1 { flex-basis: 28%; }
+
+  header h1 { 
+    -ms-flex-preferred-size: 28%; 
+    flex-basis: 28%; 
+  }
 
   .hamburger {
     width: 10%;
@@ -886,6 +899,8 @@ footer {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out; 
   }
 
@@ -897,12 +912,16 @@ footer {
     top: 75px;
     right: 9%;
     background: #009AD8;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
 
   .bar.ham-active { 
     background: transparent;
-    transform: translateX(-3px); 
+    -webkit-transform: translateX(-3px);
+        -ms-transform: translateX(-3px);
+            transform: translateX(-3px); 
   }
 
   .bar::before,
@@ -913,23 +932,40 @@ footer {
     border-radius: 5px;
     position: absolute;
     left: 1%;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
     background: #009AD8;
   }
 
   .bar::before { 
     top: 0px;
-    transform: translateY(7px);
+    -webkit-transform: translateY(7px);
+        -ms-transform: translateY(7px);
+            transform: translateY(7px);
+    -webkit-transition: 0.6s ease;
+    -o-transition: 0.6s ease;
     transition: 0.6s ease;
   }
 
   .bar::after { 
     top: 0px; 
-    transform: translateY(-7px);
+    -webkit-transform: translateY(-7px); 
+        -ms-transform: translateY(-7px); 
+            transform: translateY(-7px);
   }
 
-  .bar.ham-active::after { transform: rotate(45deg); }
-  .bar.ham-active::before { transform: rotate(-45deg); }
+  .bar.ham-active::after { 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+  }
+
+  .bar.ham-active::before {
+    -webkit-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    transform: rotate(-45deg); 
+  }
 
   .menu ul {
     position: absolute;
@@ -941,11 +977,20 @@ footer {
     top: 120px;
     left: -100%;
     text-align: center;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+            transform: scaleY(0);
   }
 
-  .menu ul.active { transform: scaleY(1); }
+  .menu ul.active {
+    -webkit-transform: scaleY(1); 
+    -ms-transform: scaleY(1); 
+    transform: scaleY(1); 
+  }
+
   .menu ul.active li a { border: none; }
   .menu { width: 7%; }
   .menu .active-navlist a { color: #009AD8; }
@@ -975,7 +1020,11 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
-  header h1 { flex-basis: 40%; }
+  header h1 {
+    -ms-flex-preferred-size: 40%; 
+    flex-basis: 40%; 
+  }
+
   .hamburger { padding: 15px 2%; }
   .banner form div:last-child { width: 17%; }
   .weather-display { width: 50%; }
@@ -983,8 +1032,11 @@ footer {
   .dolorem-section .wrapper { width: 80%; }
 
   .dolorem-section ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .dolorem-section li div:last-child {
@@ -1007,7 +1059,11 @@ footer {
   }
 
   .awesome-photo { width: 100%; }
-  .image-list ul li { flex-basis: 100%; }
+
+  .image-list ul li { 
+    -ms-flex-preferred-size: 100%; 
+    flex-basis: 100%; 
+  }
 
   .footer-top {
     margin-bottom: 15px;
@@ -1021,7 +1077,11 @@ footer {
 
 @media only screen and (max-width: 540px) {
 
-  header h1 { flex-basis: 55%; }
+  header h1 { 
+    -ms-flex-preferred-size: 55%; 
+    flex-basis: 55%; 
+  }
+
   .hamburger { padding: 13px 4%; }
 
   .bar { 
@@ -1036,8 +1096,12 @@ footer {
   .weather-condition { width: 80%; }
 
   .live-camera ul {
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .live-camera ul li { width: 80%; }
@@ -1058,7 +1122,11 @@ footer {
 
 @media only screen and (max-width: 480px) {
 
-  header h1 { flex-basis: 60%; }
+  header h1 { 
+    -ms-flex-preferred-size: 60%; 
+    flex-basis: 60%; 
+  }
+
   header h1 img { width: 37%; }
   header h1 span { font-size: 14px; }
   .hamburger { padding: 14px 6%; }
@@ -1114,7 +1182,11 @@ footer {
 
 @media only screen and (max-width: 320px) {
 
-  header h1 { flex-basis: 70%; }
+  header h1 { 
+    -ms-flex-preferred-size: 70%; 
+    flex-basis: 70%; 
+  }
+  
   header h1 span { font-size: 11px; }
   .hamburger { padding: 12px 11%; }
   .bar { width: 5%; }
@@ -1125,14 +1197,13 @@ footer {
   .dolorem-section li div:last-child,
   .dolorem-section li:nth-child(2) div:last-child, 
   .dolorem-section li:nth-child(3) div:last-child { width: 76%; }
+  .footer-top .email::-webkit-input-placeholder { font-size: 12px; }
+  .footer-top .email::-moz-placeholder { font-size: 12px; }
+  .footer-top .email:-ms-input-placeholder { font-size: 12px; }
+  .footer-top .email::-ms-input-placeholder { font-size: 12px; }
   .footer-top .email::placeholder { font-size: 12px; }
   .footer-top form div:last-child { width: 35%; }
 }
-
-
-
-
-
 
 /* media queries for min width 996px */
 @media only screen and (min-width: 996px) {

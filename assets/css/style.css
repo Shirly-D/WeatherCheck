@@ -323,7 +323,7 @@ header h1 span > span::first-letter { text-transform: lowercase; }
 }
 
 .weather-condition { 
-  width: 45%;
+  width: 50%;
   margin-top: 25px; 
   display: -webkit-box; 
   display: -ms-flexbox; 

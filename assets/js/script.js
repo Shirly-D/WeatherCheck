@@ -35,7 +35,7 @@ button.addEventListener('click', function(e){
     {
         weatherData(data);
     })
-})
+});
 
 function weatherData(weatherCheck) {
     var dateObject = new Date();

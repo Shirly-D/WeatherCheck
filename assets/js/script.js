@@ -7,4 +7,5 @@ menu.addEventListener('click', function(e){
     menu.classList.toggle('active');
     bar.classList.toggle('ham-active');
     navUl.classList.toggle('active');
+    menu.classList.remove('active-navlist')
 })

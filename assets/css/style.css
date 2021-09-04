@@ -919,6 +919,7 @@ footer {
   .menu { width: 7%; }
   .menu .active-navlist a { color: #009AD8; }
   .menu ul li a { color: #FFFFFF; }
+  .menu:hover nav ul { left: 0; }
 
   .menu ul li {
     display: block;

@@ -322,6 +322,16 @@ header h1 span > span::first-letter { text-transform: lowercase; }
   vertical-align: text-bottom;  
 }
 
+.display-city-temp figure .clear { background-image: url('/assets/images/icons/icon-1.svg'); }
+.display-city-temp figure .broken-clouds { background-image: url('/assets/images/icons/icon-3.svg'); }
+.display-city-temp figure .clouds { background-image: url('/assets/images/icons/icon-5.svg'); }
+.display-city-temp figure .mist { background-image: url('/assets/images/icons/icon-7.svg'); }
+.display-city-temp figure .light-rain { background-image: url('/assets/images/icons/icon-9.svg'); }
+.display-city-temp figure .heavy-rain { background-image: url('/assets/images/icons/icon-10.svg'); }
+.display-city-temp figure .thunderstorm { background-image: url('/assets/images/icons/icon-12.svg'); }
+.display-city-temp figure .drizzle { background-image: url('/assets/images/icons/icon-13.svg');}
+.display-city-temp figure .rain { background-image: url('/assets/images/icons/icon-14.svg');}
+
 .weather-condition { 
   width: 45%;
   margin-top: 25px; 

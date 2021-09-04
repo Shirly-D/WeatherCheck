@@ -9,9 +9,6 @@ menu.addEventListener('click', function(e){
     navUl.classList.toggle('active');
 })
 
-// Active nav links
-
-
 
 // weather check
 
@@ -24,7 +21,8 @@ var temperature = document.querySelector('.temperature');
 var humidity = document.querySelector('.humidity');
 var windSpeed = document.querySelector('.wind-speed');
 var compass = document.querySelector('.compass');
-var image = document.querySelector('.')
+var image = document.querySelector('.temp-image');
+var display = document.querySelector('.display-city-temp');
  
 button.addEventListener('click', function(e){
     e.preventDefault();
@@ -39,7 +37,7 @@ button.addEventListener('click', function(e){
     })
 })
 
-function weatherData(w) {
+function weatherData(weatherCheck) {
     var dateObject = new Date();
     var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     day.innerHTML = week[dateObject.getDay()]; 
@@ -47,15 +45,32 @@ function weatherData(w) {
     date.innerHTML = ""; 
     date.innerHTML += dateObject.getDate();
     date.innerHTML += " " + month[dateObject.getMonth()];
-    var celcius = Math.round(parseFloat(w.main.temp)-273.15);
-    var fahrenheit = Math.round(((parseFloat(w.main.temp)-273.15)*1.8)+32);
+    var celcius = Math.round(parseFloat(weatherCheck.main.temp)-273.15);
+    var fahrenheit = Math.round(((parseFloat(weatherCheck.main.temp)-273.15)*1.8)+32);
     temperature.innerHTML = celcius + '&deg;' + "C";
-    cityName.innerHTML =  w.name;
-    humidity.innerHTML = w.main.humidity + "%";
-    windSpeed.innerHTML = w.wind.speed + "m/sec";
-    compass.innerHTML = w.wind.deg + "&deg;";
-
-
+    cityName.innerHTML =  weatherCheck.name;
+    humidity.innerHTML = weatherCheck.main.humidity + "%";
+    windSpeed.innerHTML = weatherCheck.wind.speed + "m/sec";
+    compass.innerHTML = weatherCheck.wind.deg + "&deg;";
+    image = weatherCheck.weather[0].main;
+    
+    if (image === "Drizzle") {
+        display.classList.add('drizzle');
+    } else if (image === "Thunderstorm") {
+        display.classList.add('thunderstorm');
+    } else if (image === "Rain") {
+        display.classList.add('rain');
+    } else if (image === "Mist" || image === "Haze" || image === "Smoke") {
+        display.classList.add('mist');
+    } else if (image === "Clouds") {
+        display.classList.add('cloud');
+    } else if (image === "Broken clouds") {
+        display.classList.add('broken-cloud');
+    } else if (image === "Clear") {
+        display.classList.add('clear');
+    }  else {
+        display.classList.add ('clear');
+    }
 
 } 
 
